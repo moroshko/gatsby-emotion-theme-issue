@@ -1,11 +1,14 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
+import { withTheme } from "emotion-theming";
 
-function Button({ as, children }) {
+function Button({ theme, as, children }) {
+  console.log("props", JSON.stringify({ theme }, null, 2));
+
   return (
     <button
       css={theme => {
-        console.log(JSON.stringify({ theme }, null, 2));
+        console.log("css", JSON.stringify({ theme }, null, 2));
       }}
     >
       {children}
@@ -13,4 +16,4 @@ function Button({ as, children }) {
   );
 }
 
-export default Button;
+export default withTheme(Button);

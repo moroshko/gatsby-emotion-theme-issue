@@ -1,7 +1,6 @@
 import React from "react"
-import { ThemeProvider } from "emotion-theming"
-import Button from "../components/button" // theme is fine here
-//import Button from "../../../src/components/button" // theme is empty here
+import ThemeProvider from "../../../src/ThemeProvider"
+import Button from "../../../src/components/button"
 
 const theme = {
   colors: {
